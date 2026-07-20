@@ -1,0 +1,19 @@
+<!-- @dsCard group="Components" viewport="700x180" name="Feedback — Alert" -->
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--color-background);font-family:var(--font-sans);padding:24px;box-sizing:border-box;}</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const DS = Object.values(window).find(v => v && v.Alert) || window;
+const { Alert } = DS;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div style={{display:'flex',flexDirection:'column',gap:14}}>
+    <Alert tone="success" title="Thanks — you're on the list.">We'll be in touch before the next planting day.</Alert>
+    <Alert tone="warning" title="Bookings are almost full.">Only a few spots left for the June tour.</Alert>
+  </div>
+);
+</script></body></html>
