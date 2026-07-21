@@ -3,9 +3,8 @@
 The brand and UI system for **Carinya Parc**, a regenerative farm at The Branch, Upper Hunter, NSW (carinyaparc.com.au). Warm, rounded, grounded and welcoming — a "peaceful home" for land, food and community.
 
 ## Sources
-- **Website codebase** (mounted locally as `website/`): Next.js 16 + React 19 + Tailwind CSS 4 + Base UI + Payload CMS monorepo. UI lives in `apps/site/src`; the old theme was in `apps/site/src/styles/globals.css`.
-- **Brand Guide** and **Brand Guide Deck** authored in this project (`Brand Guide.dc.html`, `Brand Guide Deck.dc.html`).
-- `carinya-tokens.css` — the token set ported to the site's Tailwind `@theme` block.
+- This repo is the master for brand and UI. Open the guides under `brand/`; use `styles.css` for prototypes and `tailwindcss/carinya-tokens.css` for the production site.
+- **Website codebase** (mounted locally as `website/`): Next.js 16 + React 19 + Tailwind CSS 4 + Base UI + Payload CMS monorepo. UI lives in `apps/site/src`; apply tokens via `tailwindcss/carinya-tokens.css` into the site's `@theme` block.
 
 ## Content fundamentals
 - **Voice:** warm, first-person, in the founder's (Jonno's) words. "We treat the land as borrowed from our grandkids." Speak plainly and invite people in.
@@ -29,13 +28,15 @@ The brand and UI system for **Carinya Parc**, a regenerative farm at The Branch,
 - **Logo:** the wordmark **CARINYA PARC** set in Marcellus, letterspaced; **CP** monogram for square/avatar uses. There is currently **no pictorial mark** (an earlier Highland-bull emblem was retired) — render the name in type where a mark would go.
 
 ## Index
-- `styles.css` — root entry; `@import`s all token files. Link this one file.
+- `styles.css` — root entry; `@import`s all token files. Link this one file for HTML prototypes.
 - `tokens/` — `fonts.css`, `colors.css`, `typography.css`, `layout.css` (radius/elevation/spacing), `semantic.css` (+ `.dark`).
+- `tailwindcss/carinya-tokens.css` — Tailwind CSS 4 `@theme` bridge for the website.
+- `brand/` — Brand Guide, Brand Guide Deck, and Design System docs (`*.dc.html`), plus `support.js` / `deck-stage.js` to open them locally.
 - `guidelines/` — foundation specimen cards (Colors, Type, Spacing, Brand).
 - `components/` — `core/` (Button, Tag, Card, Badge), `forms/` (Input, Checkbox, Radio), `feedback/` (Alert).
 - `ui_kits/website/` — home-page recreation in the new brand.
-- `assets/` — farm photography (hero, cattle, river valley, landscape).
-- `SKILL.md` — portable skill wrapper.
+- `assets/` — farm photography (hero, cattle, river valley, landscape); brand docs reference `../assets/`.
+- `skills/carinya-parc-design/SKILL.md` — portable agent skill wrapper.
 
 ## Caveats
 - **Fonts** are Google-hosted (Marcellus, Hanken Grotesk) via `tokens/fonts.css`. Vendor the woff2 files for offline/production use if desired.

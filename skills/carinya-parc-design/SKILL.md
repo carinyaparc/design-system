@@ -4,8 +4,8 @@ description: Use this skill to generate well-branded interfaces and assets for C
 user-invocable: true
 ---
 
-Read the README.md file within this skill, and explore the other available files.
+Read the `readme.md` at the repository root, and explore `tokens/`, `components/`, `guidelines/`, `brand/`, `assets/`, and `tailwindcss/`.
 If creating visual artifacts (slides, mocks, throwaway prototypes, etc), copy assets out and create static HTML files for the user to view. If working on production code, you can copy assets and read the rules here to become an expert in designing with this brand.
 If the user invokes this skill without any other guidance, ask them what they want to build or design, ask some questions, and act as an expert designer who outputs HTML artifacts _or_ production code, depending on the need.
 
-Quick start: link `styles.css` for all tokens (colours, type, spacing, radius, shadow). Headings in Marcellus, body in Hanken Grotesk. Lead with eucalypt green and warm paperbark; gold/bracken as accents; wattle only for tiny highlights. Over-round everything; keep photography warm and full-bleed. Voice is warm and first-person.
+Quick start: link `styles.css` for all tokens (colours, type, spacing, radius, shadow). For the production Next/Tailwind site, use `tailwindcss/carinya-tokens.css`. Brand narrative and decks live in `brand/` (`Brand Guide.dc.html`, `Brand Guide Deck.dc.html`, `Design System.dc.html`). Headings in Marcellus, body in Hanken Grotesk. Lead with eucalypt green and warm paperbark; gold/bracken as accents; wattle only for tiny highlights. Over-round everything; keep photography warm and full-bleed. Voice is warm and first-person.

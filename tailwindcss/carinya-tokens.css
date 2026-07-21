@@ -1,0 +1,140 @@
+/* ============================================================
+   Carinya Parc — brand tokens for Tailwind CSS 4
+   Path in this repo: tailwindcss/carinya-tokens.css
+   Drop into apps/site/src/styles/globals.css (replace the @theme block).
+   Fonts: load Marcellus (headings) + Hanken Grotesk (body) via next/font.
+   ============================================================ */
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@import './components.css';
+
+@theme {
+  /* ---- Type ---- */
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
+  --font-heading: var(--font-marcellus), Georgia, serif;
+
+  /* ---- Eucalypt (primary · foliage green) ---- */
+  --color-eucalypt-50:  #EAF0EA;
+  --color-eucalypt-100: #D3E1D6;
+  --color-eucalypt-200: #A9C4B0;
+  --color-eucalypt-300: #7FA789;
+  --color-eucalypt-400: #4E8B63;
+  --color-eucalypt-500: #37704A;
+  --color-eucalypt-600: #2E5D45;   /* brand hero */
+  --color-eucalypt-700: #244B37;
+  --color-eucalypt-800: #1B3928;
+  --color-eucalypt-900: #12261A;
+
+  /* ---- Kangaroo Grass (secondary · dry pasture gold) ---- */
+  --color-kangaroo-50:  #FBF3DF;
+  --color-kangaroo-100: #F5E6BE;
+  --color-kangaroo-200: #EDD088;
+  --color-kangaroo-300: #E4B953;
+  --color-kangaroo-400: #D6A233;
+  --color-kangaroo-500: #C6912E;
+  --color-kangaroo-600: #A9791F;
+  --color-kangaroo-700: #856016;
+  --color-kangaroo-800: #614611;
+  --color-kangaroo-900: #3F2E0B;
+
+  /* ---- Bracken (accent · Highland herd coat) ---- */
+  --color-bracken-50:  #F7E7DC;
+  --color-bracken-100: #EFCBB4;
+  --color-bracken-200: #E0A882;
+  --color-bracken-300: #D08A5B;
+  --color-bracken-400: #C06E3C;
+  --color-bracken-500: #B25A2B;
+  --color-bracken-600: #984824;
+  --color-bracken-700: #7A391D;
+  --color-bracken-800: #5A2A15;
+  --color-bracken-900: #3A1B0E;
+
+  /* ---- Branch (support · river & dam) ---- */
+  --color-branch-50:  #E6EEEF;
+  --color-branch-100: #C3D8DC;
+  --color-branch-200: #9BBEC5;
+  --color-branch-300: #73A3AC;
+  --color-branch-400: #548792;
+  --color-branch-500: #3E6E7A;
+  --color-branch-600: #345C66;
+  --color-branch-700: #294851;
+  --color-branch-800: #1E353C;
+  --color-branch-900: #132227;
+
+  /* ---- Wattle (highlight · use sparingly) ---- */
+  --color-wattle: #E9B23C;
+
+  /* ---- Warm neutrals ---- */
+  --color-bark:      #241F18;  /* text / ink        */
+  --color-charcoal:  #3A342B;  /* secondary text    */
+  --color-stone:     #8B8272;  /* muted text        */
+  --color-line:      #E4D9C4;  /* borders           */
+  --color-paperbark: #EFE6D2;  /* page ground       */
+  --color-fleece:    #FBF7EE;  /* raised surface    */
+  --color-white:     #ffffff;
+
+  /* ---- Radius ---- */
+  --radius: 1rem;             /* 16px default */
+
+  /* ---- Semantic mappings ---- */
+  --color-background:            var(--color-paperbark);
+  --color-foreground:            var(--color-bark);
+  --color-card:                  var(--color-fleece);
+  --color-card-foreground:       var(--color-bark);
+  --color-popover:               var(--color-fleece);
+  --color-popover-foreground:    var(--color-bark);
+
+  --color-primary:               var(--color-eucalypt-600);
+  --color-primary-foreground:    #F3ECDB;
+  --color-secondary:             var(--color-kangaroo-500);
+  --color-secondary-foreground:  var(--color-kangaroo-900);
+  --color-accent:                var(--color-bracken-500);
+  --color-accent-foreground:     #F7E7DC;
+
+  --color-muted:                 var(--color-eucalypt-50);
+  --color-muted-foreground:      var(--color-stone);
+
+  --color-border:                var(--color-line);
+  --color-input:                 var(--color-line);
+  --color-ring:                  var(--color-eucalypt-600);
+
+  --color-info:                  var(--color-branch-500);
+  --color-info-foreground:       #E6EEEF;
+  --color-success:               var(--color-eucalypt-600);
+  --color-warning:               var(--color-kangaroo-500);
+  --color-destructive:           #A23A28;
+  --color-destructive-foreground:#F7E7DC;
+
+  /* ---- Charts ---- */
+  --color-chart-1: var(--color-eucalypt-600);
+  --color-chart-2: var(--color-kangaroo-500);
+  --color-chart-3: var(--color-bracken-500);
+  --color-chart-4: var(--color-branch-500);
+  --color-chart-5: var(--color-wattle);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme dark {
+  --color-background:            var(--color-eucalypt-900);
+  --color-foreground:            #F3ECDB;
+  --color-card:                  var(--color-eucalypt-800);
+  --color-card-foreground:       #F3ECDB;
+  --color-popover:               var(--color-eucalypt-800);
+  --color-popover-foreground:    #F3ECDB;
+
+  --color-primary:               var(--color-eucalypt-400);
+  --color-primary-foreground:    var(--color-eucalypt-900);
+  --color-secondary:             var(--color-kangaroo-400);
+  --color-secondary-foreground:  var(--color-eucalypt-900);
+  --color-accent:                var(--color-bracken-400);
+  --color-accent-foreground:     var(--color-eucalypt-900);
+
+  --color-muted:                 var(--color-eucalypt-700);
+  --color-muted-foreground:      #B7C9B0;
+
+  --color-border:                var(--color-eucalypt-700);
+  --color-input:                 var(--color-eucalypt-700);
+  --color-ring:                  var(--color-eucalypt-400);
+}
